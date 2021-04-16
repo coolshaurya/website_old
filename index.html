@@ -19,18 +19,22 @@
 		--footer-grey: #a2a9b0;
 		--main-grey: #f4f4f4;
 		--text-color: #121619;
+
+		--char-width: 53ch;
+		--horizontal-padding: max(calc((100% - var(--char-width)) / 2), 1rem);
+		--horizontal-padding-footer: max(calc((100% - (var(--char-width) * 1.33)) / 2), 1rem);
 	}
 
 	body, html {
 		font-size: 20px;
-		font-family: "IBM Plex Sans", serif;
+		font-family: "IBM Plex Sans", sans-serif;
 		font-weight: 400;
 		color: var(--text-color);
 	}
 
 	h1 {
 		font-size: 3rem;
-		font-family: "IBM Plex Serif", serif;
+		font-family: "IBM Plex Serif", Georgia, serif;
 		font-weight: 700;
 		font-style: italic;
 		margin-bottom: 1.5rem;
@@ -39,6 +43,7 @@
 	h2 {
 		font-size: 1.4rem;
 		font-weight: 700;
+		margin: 2rem 0 0.5rem;
 	}
 
 	header {
@@ -53,22 +58,13 @@
 
 	main {
 		background-color: var(--main-grey);
-		
-		/* top | horizontal | bottom */
-		padding: 2rem 0 1rem;
-	}
-
-	main .container {
-		min-width: 40ch;
-		max-width: 60ch;
-		margin: auto;
+		padding: 0 var(--horizontal-padding) 1.5rem;
 	}
 
 	footer {
 		font-size: 0.75rem;
 		font-style: italic;
-		padding: 0.5rem;
-		padding-left: 1rem;
+		padding: 0.5rem var(--horizontal-padding-footer);
 		background-color: var(--footer-grey);
 	}
 </style>
@@ -81,14 +77,18 @@
 		</p>
 	</header>
 	<main>
-		<div class="container">
-			<section>
-				<h2> About </h2>
-			</section>
-			<section>
-				<h2> Contact </h2>
-			</section>
-		</div>
+		<section>
+			<h2> About </h2>
+			<p>
+				 Nam non interdum dui. Duis eu tincidunt lacus. Curabitur sem nunc, pretium in neque sit amet, placerat egestas elit. Suspendisse mattis ligula sed nisl lobortis, nec maximus lorem luctus. Donec rhoncus, urna sit amet malesuada aliquam, urna quam pharetra massa, a faucibus ipsum purus a nunc. Vestibulum ac tristique nibh. Fusce at libero sit amet nisl tincidunt egestas. Donec id mattis nunc. Proin mollis lectus nibh. Aliquam fringilla dolor nec lobortis pretium. Suspendisse non cursus nisi, et varius quam. Fusce dictum vitae erat et pulvinar. 
+			</p>
+ 		</section>
+		<section>
+			<h2> Contact </h2>
+			<p>
+				Github: <a href="https://github.com/coolshaurya">coolshaurya</a>
+			<p>
+		</section>
 	</main>
 	<footer>
 		&copy; 2021 Shaurya Shubham. All Rights Reserved.
