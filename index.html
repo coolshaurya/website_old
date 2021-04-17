@@ -3,9 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Shaurya Shubham</title>
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,700&text=Shaurya+Shubham&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 <style>
 	* {
@@ -15,41 +16,49 @@
 	}
 
 	:root {
-		--header-teal: #08bdba;
-		--footer-grey: #a2a9b0;
-		--main-grey: #f4f4f4;
-		--text-color: #121619;
+		--header-bg: #08bdba;
+		--footer-bg: #a2a9b0;
+		--main-bg: #f4f4f4;
 
+		--black: #121619;
+		
 		--char-width: 53ch;
-		--horizontal-padding: max(calc((100% - var(--char-width)) / 2), 1rem);
-		--horizontal-padding-footer: max(calc((100% - (var(--char-width) * 1.33)) / 2), 1rem);
+		--horizontal-padding: max(calc((100% - var(--char-width)) / 2), 0.5rem);
+		--horizontal-padding-footer: max(calc((100% - (var(--char-width) * 1.33)) / 2), 0.5rem);
 	}
 
 	body, html {
 		font-size: 20px;
 		font-family: "IBM Plex Sans", sans-serif;
 		font-weight: 400;
-		color: var(--text-color);
+		color: var(--black);
 	}
 
 	h1 {
-		font-size: 3rem;
+		/* miniumum, maximum, default */
+		font-size: clamp(1.7rem, 3rem, 15vw);
 		font-family: "IBM Plex Serif", Georgia, serif;
 		font-weight: 700;
 		font-style: italic;
-		margin-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
 	}
 
 	h2 {
 		font-size: 1.4rem;
 		font-weight: 700;
-		margin: 2rem 0 0.5rem;
+		padding: 2rem 0 0.5rem;
+	}
+
+	h3 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		padding: 1rem 0 0.25rem;
 	}
 
 	header {
 		text-align: center;
-		background-color: var(--header-teal);
-		padding: 3rem 1rem;
+		background-color: var(--header-bg);
+		padding: 4rem 1rem;
 	}
 
 	header p {
@@ -57,7 +66,7 @@
 	}
 
 	main {
-		background-color: var(--main-grey);
+		background-color: var(--main-bg);
 		padding: 0 var(--horizontal-padding) 1.5rem;
 	}
 
@@ -65,9 +74,30 @@
 		font-size: 0.75rem;
 		font-style: italic;
 		padding: 0.5rem var(--horizontal-padding-footer);
-		background-color: var(--footer-grey);
+		background-color: var(--footer-bg);
+	}
+
+	a:link {
+		text-decoration: none;
+		padding: 0.1rem;
+		color: #0043ce;
+	}
+
+	a:visited {
+		color: #6929c4;
+	}
+
+	a:link:hover, a:link:focus {
+		background-color: #a7f0ba;
+		border-radius: 0.2rem;
+	}
+
+	a:link:focus, a:visited:focus {
+		border: 0.05rem dashed var(--black);
+		padding: 0.05rem;
 	}
 </style>
+
 </head>
 <body>
 	<header>
@@ -78,16 +108,46 @@
 	</header>
 	<main>
 		<section>
-			<h2> About </h2>
+			<h2 id="about"> About </h2>
 			<p>
-				 Nam non interdum dui. Duis eu tincidunt lacus. Curabitur sem nunc, pretium in neque sit amet, placerat egestas elit. Suspendisse mattis ligula sed nisl lobortis, nec maximus lorem luctus. Donec rhoncus, urna sit amet malesuada aliquam, urna quam pharetra massa, a faucibus ipsum purus a nunc. Vestibulum ac tristique nibh. Fusce at libero sit amet nisl tincidunt egestas. Donec id mattis nunc. Proin mollis lectus nibh. Aliquam fringilla dolor nec lobortis pretium. Suspendisse non cursus nisi, et varius quam. Fusce dictum vitae erat et pulvinar. 
+				I am a programmer who knows Rust and some web development.
+				Over the years, I have made some <a href="#projects">projects</a>.
+				Most of them are on my <a href="https://github.com/coolshaurya">Github</a>.
 			</p>
  		</section>
 		<section>
-			<h2> Contact </h2>
+			<h2 id="contact"> Contact </h2>
 			<p>
-				Github: <a href="https://github.com/coolshaurya">coolshaurya</a>
+				You can contact me via email at
+				<a href="mailto:shauryashubham1234567890@gmail.com">shaurya<wbr>shubham<wbr>1234567890<wbr>@gmail.com</a>.
 			<p>
+		</section>
+		<section>
+			<h2 id="projects"> Projects </h2>
+			<p>
+				Here are a few of the projects that I have made.
+			</p>
+
+			<h3> Tic-tac-toe </h3>
+			<p>
+				A simple tic-tac-toe game made using HTML, CSS and JavaScript.
+			</p>
+			<a href="https://github.com/coolshaurya/tic-tac-toe">View source on Github</a>
+			<a href="https://coolshaurya.github.io/tictactoe">See live</a>
+
+			<h3> Connect-4 </h3>
+			<p>
+				A Connect-4 game written in Rust that uses the
+                                <a href="https://github.com/hecrj/iced">iced</a> GUI library.
+			</p>
+			<a href="https://github.com/coolshaurya/connect-4">View source on Github</a>
+
+			<h3> Chinese Checkers </h3>
+			<p>
+				A Chinese Checkers game written in Rust that uses the
+                                <a href="https://github.com/hecrj/coffee">coffee</a> game engine.
+			</p>
+			<a href="https://github.com/coolshaurya/chinese_checkers">View source on Github</a>
 		</section>
 	</main>
 	<footer>
