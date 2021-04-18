@@ -5,7 +5,6 @@
 	<title>Shaurya Shubham</title>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,700&text=Shaurya+Shubham&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 <style>
@@ -16,79 +15,80 @@
 	}
 
 	:root {
-		--header-bg: #08bdba;
+		--body-bg: #f4f4f4;
 		--footer-bg: #a2a9b0;
-		--main-bg: #f4f4f4;
-
 		--black: #121619;
+		--h1-color: #24a148;
 		
+		--link-color: #0043ce;
+		--link-visited-color: #6929c4;
+		--link-hover-bg: #a7f0ba;
+
 		--char-width: 53ch;
 		--horizontal-padding: max(calc((100% - var(--char-width)) / 2), 0.5rem);
-		--horizontal-padding-footer: max(calc((100% - (var(--char-width) * 1.33)) / 2), 0.5rem);
 	}
 
 	body, html {
 		font-size: 20px;
-		font-family: "IBM Plex Sans", sans-serif;
+		font-family: "IBM Plex Sans", Helvetica, sans-serif;
 		font-weight: 400;
 		color: var(--black);
+		background-color: var(--body-bg);
 	}
 
+	h1, h2, h3 { font-weight: 700; }
+
 	h1 {
-		/* miniumum, maximum, default */
-		font-size: clamp(1.7rem, 3rem, 15vw);
-		font-family: "IBM Plex Serif", Georgia, serif;
-		font-weight: 700;
-		font-style: italic;
-		padding-bottom: 1.5rem;
+		font-size: 1.8rem;
+		padding: 1rem 0 0.5rem;
+
+		color: var(--h1-color);
 	}
 
 	h2 {
 		font-size: 1.4rem;
-		font-weight: 700;
-		padding: 2rem 0 0.5rem;
+		padding: 1rem 0 0.5rem;
 	}
 
 	h3 {
 		font-size: 1.1rem;
-		font-weight: 700;
 		padding: 1rem 0 0.25rem;
 	}
 
 	header {
-		text-align: center;
-		background-color: var(--header-bg);
-		padding: 4rem 1rem;
+		padding: 0 var(--horizontal-padding);
 	}
 
 	header p {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 
 	main {
-		background-color: var(--main-bg);
 		padding: 0 var(--horizontal-padding) 1.5rem;
 	}
 
 	footer {
-		font-size: 0.75rem;
-		font-style: italic;
-		padding: 0.5rem var(--horizontal-padding-footer);
+		padding: 0.25rem var(--horizontal-padding);
 		background-color: var(--footer-bg);
+	}
+
+	footer p {
+		font-size: 0.65rem;
+		font-style: italic;
 	}
 
 	a:link {
 		text-decoration: none;
 		padding: 0.1rem;
-		color: #0043ce;
+		color: var(--link-color);
 	}
 
 	a:visited {
-		color: #6929c4;
+		color: var(--link-visited-color);
 	}
 
 	a:link:hover, a:link:focus {
-		background-color: #a7f0ba;
+		background-color: var(--link-hover-bg);
 		border-radius: 0.2rem;
 	}
 
@@ -128,30 +128,30 @@
 				Here are a few of the projects that I have made.
 			</p>
 
+			<h3> Chinese Checkers </h3>
+			<p>
+				A Chinese Checkers game written in Rust that uses the
+				<a href="https://github.com/hecrj/coffee">coffee</a> game engine.
+			</p>
+			<a href="https://github.com/coolshaurya/chinese_checkers">View source on Github</a>
+
+			<h3> Connect-4 </h3>
+			<p>
+				A Connect-4 game written in Rust that uses the
+				<a href="https://github.com/hecrj/iced">iced</a> GUI library.
+			</p>
+			<a href="https://github.com/coolshaurya/connect-4">View source on Github</a>
+
 			<h3> Tic-tac-toe </h3>
 			<p>
 				A simple tic-tac-toe game made using HTML, CSS and JavaScript.
 			</p>
 			<a href="https://github.com/coolshaurya/tic-tac-toe">View source on Github</a>
-			<a href="https://coolshaurya.github.io/tictactoe">See live</a>
-
-			<h3> Connect-4 </h3>
-			<p>
-				A Connect-4 game written in Rust that uses the
-                                <a href="https://github.com/hecrj/iced">iced</a> GUI library.
-			</p>
-			<a href="https://github.com/coolshaurya/connect-4">View source on Github</a>
-
-			<h3> Chinese Checkers </h3>
-			<p>
-				A Chinese Checkers game written in Rust that uses the
-                                <a href="https://github.com/hecrj/coffee">coffee</a> game engine.
-			</p>
-			<a href="https://github.com/coolshaurya/chinese_checkers">View source on Github</a>
+			<a href="https://coolshaurya.github.io/tic-tac-toe">See live</a>
 		</section>
 	</main>
 	<footer>
-		&copy; 2021 Shaurya Shubham. All Rights Reserved.
+		<p> &copy; 2021 Shaurya Shubham. All Rights Reserved. </p>
 	</footer>
 </body>
 </html>
