@@ -24,10 +24,9 @@
 		
 		--link-color: #0043ce;
 		--link-visited-color: #6929c4;
-		--link-hover-bg: #a7f0ba;
 
-		--char-width: 53ch;
-		--horizontal-padding: max(calc((100% - var(--char-width)) / 2), 1rem);
+		--width: 56ch;
+		--horizontal-padding: max(calc((100% - var(--width)) / 2), 1rem);
 	}
 
 	body, html {
@@ -88,16 +87,6 @@
 
 	a:visited {
 		color: var(--link-visited-color);
-	}
-
-	a:link:hover, a:link:focus {
-		background-color: var(--link-hover-bg);
-		border-radius: 0.2rem;
-	}
-
-	a:link:focus, a:visited:focus {
-		border: 0.05rem dashed var(--black);
-		padding: 0.05rem;
 	}
 </style>
 
