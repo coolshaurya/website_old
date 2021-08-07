@@ -36,6 +36,12 @@
 		font-weight: 300;
 		color: var(--black);
 		background-color: var(--body-bg);
+
+		/* Push footer to bottom on very tall screens */
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	h1, h2, h3 { font-weight: 600; }
@@ -61,7 +67,7 @@
 		padding: 0 var(--horizontal-padding);
 	}
 
-	header p {
+	p.subtitle {
 		font-size: 1.1rem;
 	}
 
@@ -75,7 +81,8 @@
 	}
 
 	footer p {
-		font-size: 0.65rem;
+		font-size: 0.7rem;
+		font-style: italic;
 	}
 
 	a:link {
@@ -91,13 +98,11 @@
 
 </head>
 <body>
-	<header>
+	<main>
 		<h1> Shaurya Shubham </h1>
-		<p>
+		<p class="subtitle">
 			I am a programmer who mainly codes in Rust.
 		</p>
-	</header>
-	<main>
 		<section>
 			<h2 id="about"> About </h2>
 			<p>
